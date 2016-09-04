@@ -43,6 +43,9 @@
   text-decoration: none;
   font-size: 110%;
 }
+.contacts__item-link:focus {
+  outline: none;
+}
 .contacts__item-link::before {
   display: inline-block;
   width: 1.28571429em;
@@ -64,6 +67,11 @@
 .contacts__item-link_phone::before {
   content: "\f10b";
 }
+@media (max-width: 799px) {
+  .contacts {
+    padding: 5px 0;
+  }
+}
 /* End Contacts */
 
 /* Navigation menu */
@@ -79,8 +87,8 @@
   box-shadow: none;
 }
 .navigation-menu > .navigation-menu__menu > .navigation-menu__item {
-  margin: 0 .4%;
-  width: 32.533%;
+  margin: 0 1%;
+  width: 31.333%;
 }
 .navigation-menu > .navigation-menu__menu > .navigation-menu__item > .navigation-menu__menu {
   top: 100%;
@@ -175,7 +183,7 @@
     box-shadow: 0 0 10px 0 #000;
   }
   .navigation-menu__menu {
-    padding: 5px 15px;
+    padding: 5px 20px;
   }
   .navigation-menu__menu_left {
     right: auto;
