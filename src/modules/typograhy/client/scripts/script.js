@@ -56,7 +56,7 @@ function loadDynamicContent(elements, contentFile) {
       }
     }
   };
-  xhttp.open('POST', contentFile, true);
+  xhttp.open('GET', contentFile, true);
   xhttp.send();
 }
 function removeClass(className, element) {
