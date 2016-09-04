@@ -43,6 +43,9 @@
   text-decoration: none;
   font-size: 110%;
 }
+.contacts__item-link:focus {
+  outline: none;
+}
 .contacts__item-link::before {
   display: inline-block;
   width: 1.28571429em;
