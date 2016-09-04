@@ -1,0 +1,263 @@
+/* All */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+/* End All */
+
+/* Brand */
+.brand {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.brand__item {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  background: url(../files/images/potato-field.jpg) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-shadow: 0 0 1px 0 #000;
+  color: #277554;
+  text-decoration: none;
+  text-shadow: 1px -1px black;
+  font-weight: bold;
+  font-size: 200%;
+}
+/* End Brand */
+
+/* Contacts */
+.contacts {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+}
+.contacts__item-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 110%;
+}
+.contacts__item-link::before {
+  display: inline-block;
+  width: 1.28571429em;
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.contacts__item-link_address::before {
+  content: "\f041";
+}
+.contacts__item-link_email::before {
+  padding: 0 5px 0 0;
+  content: "\f0e0";
+}
+.contacts__item-link_phone::before {
+  content: "\f10b";
+}
+/* End Contacts */
+
+/* Navigation menu */
+.navigation-menu {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.navigation-menu > .navigation-menu__menu {
+  position: static;
+  visibility: visible;
+  background: 0;
+  box-shadow: none;
+}
+.navigation-menu > .navigation-menu__menu > .navigation-menu__item {
+  margin: 0 .4%;
+  width: 32.533%;
+}
+.navigation-menu > .navigation-menu__menu > .navigation-menu__item > .navigation-menu__menu {
+  top: 100%;
+  left: 0;
+}
+.navigation-menu__bars {
+  display: none;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0 0 2px 0 #000;
+}
+.navigation-menu__bars::before {
+  display: inline-block;
+  width: 1.28571429em;
+  content: "\f0c9";
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.navigation-menu__item {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+  vertical-align: top;
+}
+.navigation-menu__item:hover > .navigation-menu__link {
+  background: #6b4e90;
+  box-shadow: none;
+}
+.navigation-menu__item:hover > .navigation-menu__menu {
+  visibility: visible;
+}
+.navigation-menu__link {
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+  background: #8f78ad;
+  box-shadow: 0 0 2px 0 #000;
+  color: inherit;
+  text-decoration: none;
+}
+.navigation-menu__menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  visibility: hidden;
+  width: 100%;
+  background: #8f78ad;
+  box-shadow: 0 0 10px 0 #000;
+}
+.navigation-menu__menu_left {
+  right: 100%;
+  left: auto;
+}
+@media (max-width: 799px) {
+  .navigation-menu {
+    background: #8f78ad;
+  }
+  .navigation-menu > .navigation-menu__menu  {
+    visibility: hidden;
+    margin: -10px 0 0 0;
+    height: 0;
+    box-shadow: 0 0 10px 0 #000;
+  }
+  .navigation-menu > .navigation-menu__menu > .navigation-menu__item {
+    margin: 0;
+    width: 100%;
+  }
+  .navigation-menu:hover > .navigation-menu__bars {
+    background: #6b4e90;
+    box-shadow: 0 0 10px 0 #000;
+  }
+  .navigation-menu:hover > .navigation-menu__menu  {
+    visibility: visible;
+    margin: 0;
+    height: auto;
+  }
+  .navigation-menu__bars {
+    display: inline-block;
+  }
+  .navigation-menu__item:hover > .navigation-menu__menu {
+    position: static;
+    visibility: visible;
+  }
+  .navigation-menu__item:hover > .navigation-menu__link {
+    box-shadow: 0 0 10px 0 #000;
+  }
+  .navigation-menu__menu {
+    padding: 5px 15px;
+  }
+  .navigation-menu__menu_left {
+    right: auto;
+  }
+}
+/* End Navigation menu */
+
+/* Page */
+.page {
+  padding: 5px;
+}
+.page_0 {
+  display: none;
+}
+.page_25 {
+  width: 25%;
+}
+.page_33 {
+  width: 33.333%;
+}
+.page_50 {
+  width: 50%;
+}
+.page_66 {
+  width: 66.666%;
+}
+.page_75 {
+  width: 75%;
+}
+.page_100 {
+  width: 100%;
+}
+.page__row {
+  font-size: 0;
+}
+.page__footer {
+  background: #aaa039;
+}
+.page__header {
+  background: #75af96;
+}
+.page__main {
+  margin: 5px auto;
+  width: 90%;
+  background: #808080;
+}
+.page__footer,
+.page__header,
+.page__main {
+  padding: 5px;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+}
+.page__viewport {
+  background: url(../files/images/potato-field.jpg) no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Times New Roman", Times, serif;
+}
+@media (max-width: 799px) {
+  .page_mob-0 {
+    display: none;
+  }
+  .page_mob-25 {
+    width: 25%;
+  }
+  .page_mob-33 {
+    width: 33.333%;
+  }
+  .page_mob-50 {
+    width: 50%;
+  }
+  .page_mob-66 {
+    width: 66.666%;
+  }
+  .page_mob-75 {
+    width: 75%;
+  }
+  .page_mob-100 {
+    width: 100%;
+  }
+}
+/* End Page */
