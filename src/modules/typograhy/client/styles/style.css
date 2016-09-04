@@ -79,8 +79,8 @@
   box-shadow: none;
 }
 .navigation-menu > .navigation-menu__menu > .navigation-menu__item {
-  margin: 0 .4%;
-  width: 32.533%;
+  margin: 0 1%;
+  width: 31.333%;
 }
 .navigation-menu > .navigation-menu__menu > .navigation-menu__item > .navigation-menu__menu {
   top: 100%;
