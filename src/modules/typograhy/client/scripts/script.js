@@ -45,7 +45,8 @@ function fitNavigationMenu() {
   addClassesIfConditions(['navigation-menu__menu_left'], [isOut], document.getElementsByClassName('navigation-menu__menu'));
 }
 function isOut(element) {
-  return (findPos(element).x + element.clientWidth > window.innerWidth);
+  var position = findPos(element);
+  return (position) ? (position.x + element.clientWidth > window.innerWidth) : false;
 }
 function loadDynamicContent(elements, contentFile) {
   var xhttp = new XMLHttpRequest();
