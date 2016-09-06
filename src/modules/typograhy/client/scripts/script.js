@@ -74,11 +74,18 @@ function removeClasses(classNames, element) {
 }
 // End Declarations
 
-// Listeners
-window.addEventListener("resize", function() {
+// Event functions
+function onResize() {
   fitNavigationMenu();
+}
+// End Event functions
+
+// Listeners
+window.addEventListener('resize', function() {
+  onResize();
+  setTimeout(onResize, 1000);
 });
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener('DOMContentLoaded', function(event) {
   fitNavigationMenu();
 });
 // End Listeners
