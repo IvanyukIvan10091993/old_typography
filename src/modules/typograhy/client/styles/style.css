@@ -1,3 +1,4 @@
+/* Media all */
 /* All */
 * {
   box-sizing: border-box;
@@ -6,7 +7,6 @@
   font-size: 17px;
 }
 /* End All */
-
 /* Brand */
 .brand {
   display: inline-block;
@@ -30,7 +30,6 @@
   font-size: 200%;
 }
 /* End Brand */
-
 /* Contacts */
 .contacts {
   display: inline-block;
@@ -67,13 +66,7 @@
 .contacts__item-link_phone::before {
   content: "\f10b";
 }
-@media (max-width: 799px) {
-  .contacts {
-    padding: 5px 0;
-  }
-}
 /* End Contacts */
-
 /* Navigation menu */
 .navigation-menu {
   display: inline-block;
@@ -94,24 +87,6 @@
   top: 100%;
   left: 0;
 }
-.navigation-menu__bars {
-  display: none;
-  padding: 5px;
-  width: 100%;
-  box-shadow: 0 0 2px 0 #000;
-}
-.navigation-menu__bars::before {
-  display: inline-block;
-  width: 1.28571429em;
-  content: "\f0c9";
-  text-align: center;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .navigation-menu__item {
   position: relative;
   display: inline-block;
@@ -121,7 +96,7 @@
 }
 .navigation-menu__item:hover > .navigation-menu__link {
   background: #6b4e90;
-  box-shadow: none;
+  box-shadow: 0 0 10px 0 #000;
 }
 .navigation-menu__item:hover > .navigation-menu__menu {
   visibility: visible;
@@ -149,48 +124,23 @@
   right: 100%;
   left: auto;
 }
-@media (max-width: 799px) {
-  .navigation-menu {
-    background: #8f78ad;
-  }
-  .navigation-menu > .navigation-menu__menu  {
-    visibility: hidden;
-    margin: -10px 0 0 0;
-    height: 0;
-    box-shadow: 0 0 10px 0 #000;
-  }
-  .navigation-menu > .navigation-menu__menu > .navigation-menu__item {
-    margin: 0;
-    width: 100%;
-  }
-  .navigation-menu:hover > .navigation-menu__bars {
-    background: #6b4e90;
-    box-shadow: 0 0 10px 0 #000;
-  }
-  .navigation-menu:hover > .navigation-menu__menu  {
-    visibility: visible;
-    margin: 0;
-    height: auto;
-  }
-  .navigation-menu__bars {
-    display: inline-block;
-  }
-  .navigation-menu__item:hover > .navigation-menu__menu {
-    position: static;
-    visibility: visible;
-  }
-  .navigation-menu__item:hover > .navigation-menu__link {
-    box-shadow: 0 0 10px 0 #000;
-  }
-  .navigation-menu__menu {
-    padding: 5px 20px;
-  }
-  .navigation-menu__menu_left {
-    right: auto;
-  }
+.navigation-menu__top {
+  display: none;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 0 2px 0 #000;
+}
+.navigation-menu__top::after {
+  content: "\f0c9";
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* End Navigation menu */
-
 /* Page */
 .page {
   padding: 5px;
@@ -245,27 +195,70 @@
   background-size: cover;
   font-family: "Times New Roman", Times, serif;
 }
+/* End Page */
+/* End Media all*/
+
+/* Media mobile */
 @media (max-width: 799px) {
-  .page_mob-0 {
-    display: none;
-  }
-  .page_mob-25 {
-    width: 25%;
-  }
-  .page_mob-33 {
-    width: 33.333%;
-  }
-  .page_mob-50 {
-    width: 50%;
-  }
-  .page_mob-66 {
-    width: 66.666%;
-  }
-  .page_mob-75 {
-    width: 75%;
-  }
-  .page_mob-100 {
-    width: 100%;
-  }
+/* Contacts */
+.contacts {
+  padding: 5px 0;
+}
+/* End Contacts */
+/* Navigation-menu */
+.navigation-menu {
+  background: #8f78ad;
+}
+.navigation-menu > .navigation-menu__menu > .navigation-menu__item {
+  margin: 0;
+  width: 100%;
+}
+.navigation-menu:hover > .navigation-menu__top {
+  background: #6b4e90;
+  box-shadow: 0 0 10px 0 #000;
+}
+.navigation-menu:hover > .navigation-menu__menu  {
+  display: block;
+  box-shadow: 0 0 10px 0 #000;
+}
+.navigation-menu__item:hover > .navigation-menu__menu {
+  display: block;
+}
+.navigation-menu__link {
+  padding: 10px 5px;
+}
+.navigation-menu__menu {
+  position: static;
+  display: none;
+  padding: 5px 20px;
+  box-shadow: 0 0 10px 0 #000;
+}
+.navigation-menu__top {
+  display: inline-block;
+}
+/* End Navigation-menu */
+/* Page */
+.page_mob-0 {
+  display: none;
+}
+.page_mob-25 {
+  width: 25%;
+}
+.page_mob-33 {
+  width: 33.333%;
+}
+.page_mob-50 {
+  width: 50%;
+}
+.page_mob-66 {
+  width: 66.666%;
+}
+.page_mob-75 {
+  width: 75%;
+}
+.page_mob-100 {
+  width: 100%;
 }
 /* End Page */
+}
+/* End Media mobile */

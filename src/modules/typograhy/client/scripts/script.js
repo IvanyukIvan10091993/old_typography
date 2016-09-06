@@ -45,7 +45,8 @@ function fitNavigationMenu() {
   addClassesIfConditions(['navigation-menu__menu_left'], [isOut], document.getElementsByClassName('navigation-menu__menu'));
 }
 function isOut(element) {
-  return (findPos(element).x + element.clientWidth > window.innerWidth);
+  var position = findPos(element);
+  return (position) ? (position.x + element.clientWidth > window.innerWidth) : false;
 }
 function loadDynamicContent(elements, contentFile) {
   var xhttp = new XMLHttpRequest();
@@ -73,11 +74,18 @@ function removeClasses(classNames, element) {
 }
 // End Declarations
 
-// Listeners
-window.addEventListener("resize", function() {
+// Event functions
+function onResize() {
   fitNavigationMenu();
+}
+// End Event functions
+
+// Listeners
+window.addEventListener('resize', function() {
+  onResize();
+  setTimeout(onResize, 1000);
 });
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener('DOMContentLoaded', function(event) {
   fitNavigationMenu();
 });
 // End Listeners
